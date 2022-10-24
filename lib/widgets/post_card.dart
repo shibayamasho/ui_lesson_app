@@ -6,7 +6,23 @@ import '../models/post.dart';
 
 class PostCard extends StatelessWidget {
   final Post post;
-  const PostCard({required this.post, super.key});
+  final String textReason;
+  final Color colorPrimary;
+  final Color colorPositive;
+  final Color colorNegative;
+  final String textPositive;
+  final String textNegative;
+
+  const PostCard({
+    required this.post,
+    required this.textReason,
+    required this.colorPrimary,
+    required this.colorPositive,
+    required this.colorNegative,
+    required this.textPositive,
+    required this.textNegative,
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +39,7 @@ class PostCard extends StatelessWidget {
               subtitle: const Text('2 min ago'),
               leading: ClipOval(
                 child: Container(
-                  color: Colors.blue, //
+                  color: colorPrimary,
                   width: 48,
                   height: 48,
                   child: Center(
@@ -45,7 +61,7 @@ class PostCard extends StatelessWidget {
                     width: 16,
                     height: 16,
                     decoration: BoxDecoration(
-                      border: Border.all(color: Colors.blue, width: 4),
+                      border: Border.all(color: colorPrimary, width: 4),
                       borderRadius: BorderRadius.circular(8),
                     ),
                   ),
@@ -64,13 +80,13 @@ class PostCard extends StatelessWidget {
                     decoration: BoxDecoration(
                       border: Border(
                         bottom: BorderSide(
-                          color: Colors.blue, //
+                          color: colorPrimary,
                           width: 2,
                         ),
                       ),
                     ),
                     child: Text(
-                      'text reason', //
+                      textReason, //
                       style: TextStyle(color: Colors.blueAccent),
                     ),
                   ),
@@ -78,20 +94,21 @@ class PostCard extends StatelessWidget {
                   Expanded(
                     child: TextButton(
                       style: TextButton.styleFrom(
-                        primary: Colors.blueGrey,
+                        primary: colorNegative,
                       ),
                       onPressed: (() {}),
-                      child: Text("negative button"), //
+                      child: Text(textNegative),
                     ),
                   ),
                   const SizedBox(width: 8),
                   Expanded(
                     child: TextButton(
                       style: TextButton.styleFrom(
-                        primary: Colors.redAccent,
+                        primary: colorPositive,
+                        backgroundColor: colorPositive.withOpacity(0.2),
                       ),
                       onPressed: (() {}),
-                      child: Text("positive button"), //
+                      child: Text(textPositive),
                     ),
                   ),
                 ],
