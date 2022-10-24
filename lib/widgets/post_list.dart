@@ -3,6 +3,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:ui_app/models/post.dart';
 import 'package:ui_app/widgets/post_card.dart';
+import 'post_header.dart';
 
 class PostList extends StatelessWidget {
   const PostList({super.key});
@@ -20,6 +21,7 @@ class PostList extends StatelessWidget {
           Expanded(
             child: ListView(
               children: [
+                PostHeader(),
                 PostCard(post: post1),
                 PostCard(post: post2),
                 PostCard(post: post3),
