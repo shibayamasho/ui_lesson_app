@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_app/widgets/side_navigation_widget.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,7 +11,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      title: 'UI App',
       theme: ThemeData.light(),
       home: const AdminMobilePage(),
     );
@@ -24,7 +26,10 @@ class AdminMobilePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Row(
-        children: [],
+        children: [
+          SideNavigation(),
+          VerticalDivider(width: 1, thickness: 0), //区切り縦線
+        ],
       ),
     );
   }
