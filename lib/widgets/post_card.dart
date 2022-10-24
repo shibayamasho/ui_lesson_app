@@ -5,8 +5,8 @@ import 'package:flutter/src/widgets/framework.dart';
 import '../models/post.dart';
 
 class PostCard extends StatelessWidget {
-  final Post post = Post(message: 'test message', name: 'test name');
-  PostCard({super.key});
+  final Post post;
+  const PostCard({required this.post, super.key});
 
   @override
   Widget build(BuildContext context) {
