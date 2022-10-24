@@ -27,7 +27,7 @@ class PostCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+      margin: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
       child: Card(
         elevation: 8,
         shadowColor: Colors.grey,
@@ -52,7 +52,7 @@ class PostCard extends StatelessWidget {
               ),
             ),
             Container(
-              padding: EdgeInsets.symmetric(horizontal: 8),
+              padding: const EdgeInsets.symmetric(horizontal: 8),
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -73,7 +73,7 @@ class PostCard extends StatelessWidget {
               ),
             ),
             Container(
-              padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
               child: Row(
                 children: [
                   Container(
@@ -86,8 +86,8 @@ class PostCard extends StatelessWidget {
                       ),
                     ),
                     child: Text(
-                      textReason, //
-                      style: TextStyle(color: Colors.blueAccent),
+                      textReason,
+                      style: const TextStyle(color: Colors.blueAccent),
                     ),
                   ),
                   const SizedBox(width: 24),

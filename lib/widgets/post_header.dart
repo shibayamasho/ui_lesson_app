@@ -12,8 +12,8 @@ class PostHeader extends StatelessWidget {
         Expanded(
           flex: 1,
           child: ListTile(
-            title: Text('Post'),
-            subtitle: Text('20 Posts'),
+            title: const Text('Post'),
+            subtitle: const Text('20 Posts'),
             leading: ClipOval(
               child: Container(
                 color: Colors.grey[300],
@@ -30,8 +30,8 @@ class PostHeader extends StatelessWidget {
         Expanded(
           flex: 1,
           child: ListTile(
-            title: Text('All Types'),
-            subtitle: Text(''),
+            title: const Text('All Types'),
+            subtitle: const Text(''),
             leading: ClipOval(
               child: Container(
                 color: Colors.grey[300],

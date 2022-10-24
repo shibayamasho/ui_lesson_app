@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'UI App',
+      title: 'UI Lesson App',
       theme: ThemeData.light(),
       home: const AdminMobilePage(),
     );
@@ -27,7 +27,7 @@ class AdminMobilePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Row(
-        children: [
+        children: const [
           SideNavigation(),
           VerticalDivider(width: 1, thickness: 0), //区切り縦線
           Expanded(
